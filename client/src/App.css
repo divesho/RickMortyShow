@@ -1,0 +1,39 @@
+.padtop80 {
+  padding-top: 80px;
+}
+.padtop40 {
+  padding-top: 40px;
+}
+.padtop10 {
+  padding-top: 10px;
+}
+.padleft10 {
+  padding-left: 10px;
+}
+.pad10 {
+  padding: 10px;
+}
+.pad20 {
+  padding: 20px;
+}
+.offset-m3 {
+  margin-left: 33px;
+}
+.martop30 {
+  margin-top: 30px;
+}
+.marbtm10 {
+  margin-bottom: 10px;
+}
+.marleft10 {
+  margin-left: 10px;
+}
+
+.input-field input {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif
+}
