@@ -56,6 +56,7 @@ export default function Home(props) {
     const [ sortValue, setSortValue ] = useState(SORTTYPE);
     const [ progress, setProgress ] = useState(false);
     const [ dialog, setDialog ] = useState({open: false, msg: "", type: ''});
+    const [debouncedCallApi] = useState(() => _.debounce(getFilteredCharacters, CONFIG.debounceTime));
 
     function logout() {
 
@@ -164,7 +165,7 @@ export default function Home(props) {
         switch(id) {
             case "searchField":
                 setSearchValue(value);
-                getFilteredCharacters(value, sortValue, filterData);
+                debouncedCallApi(value, sortValue, filterData);
                 break;
             case "sortField":
                 setSortValue(value);

@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const DBInitCall = require('./db/init');
-const controller = require('./controller/index');
 const CONFIG = require('./config.json');
 
 const app = express();

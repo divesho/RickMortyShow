@@ -11,5 +11,6 @@
         "regstrationSuccess": "User regstered successfully!! Please login",
         "unknownError": "some error occurred while fetching server data",
         "sessionExpiry": "Session expired! Please login again"
-    }
+    },
+    "debounceTime": 500
 }
