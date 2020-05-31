@@ -84,7 +84,7 @@ function CardContentTabs(props) {
     );
 }
 
-function CardItem(props) {
+export function CardItem(props) {
     
     const classes = styles();
     const character = props.character;

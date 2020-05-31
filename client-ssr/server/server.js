@@ -87,8 +87,6 @@ const serverRenderer = (req, res, next) => {
   } else {
     processReactComponents(req, res, next, serverCookie, null);
   }
-    
-    
 }
 
 app.get('/', serverRenderer);
