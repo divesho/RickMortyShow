@@ -1,0 +1,10 @@
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t server-img ./server/.
+    - docker build -t client-img ./client-ssr/.
+
+script:
+    - docker run -p 8081:8081 -e CI=true client-img npm run test
