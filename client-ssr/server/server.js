@@ -74,7 +74,9 @@ const serverRenderer = (req, res, next) => {
 
   if(req.url === '/' && cookies.length > 0) {
 
-    Home.loadInitData(serverCookie.jwtToken)
+    let baseURL = process.env.API_SERVER_URI || 'http://localhost:8081/'
+
+    Home.loadInitData(serverCookie.jwtToken, baseURL)
     .then((result) => {
       
       processReactComponents(req, res, next, serverCookie, result);

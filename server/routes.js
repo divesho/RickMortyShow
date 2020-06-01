@@ -3,7 +3,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 
 const controller = require('./controller');
-const CONFIG = require('./config.json');
+const CONFIG = require('./config');
 
 const checkAuth = (req, res, next) => {
 

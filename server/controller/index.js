@@ -1,5 +1,5 @@
 const dbSchema = require('./../db/schema');
-const CONFIG = require('./../config.json');
+const CONFIG = require('./../config');
 
 const _ = require('lodash');
 const bcrypt = require('bcrypt');

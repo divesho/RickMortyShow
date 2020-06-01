@@ -11,7 +11,7 @@ import Filter from './Filter';
 import Toolbox from './ToolBox';
 import SimpleDialog from './SimpleDialog';
 
-import CONFIG from './../../config.json';
+import CONFIG from './../../config';
 
 
 const styles = makeStyles((theme)=>({
@@ -297,9 +297,9 @@ export default function Home(props) {
     )
 }
 
-Home.loadInitData = function(jwtToken) {
+Home.loadInitData = function(jwtToken, baseURL) {
 
-    let url = CONFIG.apiUrl + 'initData';
+    let url = (baseURL || CONFIG.apiUrl) + 'initData';
     let headers = {headers: {Authorization: jwtToken}};
 
     return axios.get(

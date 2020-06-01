@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const DBInitCall = require('./db/init');
-const CONFIG = require('./config.json');
+const CONFIG = require('./config');
 
 const app = express();
 app.use(bodyParser.json());
@@ -20,7 +20,7 @@ app.listen(CONFIG.port, ()=>{
 });
 
 mongoose.connect(
-    `mongodb://${CONFIG.db.host}:${CONFIG.db.port}/${CONFIG.db.db}`,
+    `${CONFIG.db.host}${CONFIG.db.db}`,
     {useFindAndModify: false}
 )
 .then(()=> {

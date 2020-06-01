@@ -3,7 +3,7 @@ import { Login, Register, ForgotPassword } from './Forms';
 import axios from 'axios';
 import { withCookies } from 'react-cookie';
 
-import CONFIG from './../../config.json';
+import CONFIG from './../../config';
 
 class LoginPage extends Component {
 

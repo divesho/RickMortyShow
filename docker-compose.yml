@@ -1,0 +1,23 @@
+version: '3'
+services: 
+  mongodb-server:
+    image: 'mongo'
+    ports:
+      - '27017:27017'
+  server:
+    build: ./server/.
+    environment:
+      - MONGO_URI=mongodb://mongodb-server:27017/
+    ports:
+      - "8081:8081"
+    links:
+      - mongodb-server
+    restart: on-failure
+  client:
+    build: ./client-ssr/.
+    environment:
+      - API_SERVER_URI=http://server:8081/
+    links:
+      - server
+    ports:
+      - "8080:8080"

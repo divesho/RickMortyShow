@@ -1,6 +1,6 @@
 const dbSchema = require('./../db/schema');
 const axios = require('axios');
-const CONFIG = require('./../config.json');
+const CONFIG = require('./../config');
 
 const fetchAndInsert = () => {
 

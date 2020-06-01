@@ -1,4 +1,4 @@
-{
+const CONFIG = {
     "apiUrl": "http://localhost:8081/",
     "cookie": {
         "tokenName": "jwtToken",
@@ -12,4 +12,6 @@
         "unknownError": "some error occurred while fetching server data",
         "sessionExpiry": "Session expired! Please login again"
     }
-}
+};
+
+export default CONFIG;

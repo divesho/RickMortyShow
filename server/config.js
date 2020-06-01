@@ -1,7 +1,7 @@
-{
+module.exports = {
     "port": "8081",
     "db": {
-        "host": "localhost",
+        "host": process.env.MONGO_URI,
         "port": "27017",
         "user": "",
         "password": "",
@@ -15,4 +15,4 @@
         "expiresIn": 3600
     },
     "apiUrl": "https://rickandmortyapi.com/api/character/"
-}
+};
